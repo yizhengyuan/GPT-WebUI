@@ -1,19 +1,3 @@
-// import './App.css';
-
-// function App() {
-//   const comments = ["111","222","333"];
-//   const commentsHTML = comments.map((comment) => { 
-//     return (<li>{comment}</li>)
-//   });
-//   return (
-//     <ul className='comments'>
-//       {commentsHTML}
-//     </ul>
-//   )
-// }
-
-// export default App;
-
 import React, { useState, useEffect, useRef } from 'react';
 
 import personImg from './person.png';
