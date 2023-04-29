@@ -36,6 +36,20 @@ function App() {
     handleReplyMessage();
   }, [messages]);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.keyCode === 13) {
+        handleSendMessage();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleSendMessage]);
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflowY: 'auto', padding: '10px' }}>
